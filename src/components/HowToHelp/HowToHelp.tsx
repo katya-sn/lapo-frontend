@@ -1,3 +1,4 @@
+import { BASE_URL } from '../../utils/fetchProducts';
 import { SectionsHeader } from '../SectionsHeader';
 import './HowToHelp.scss';
 
@@ -16,7 +17,7 @@ export const HowToHelp = () => {
       <div className="help__content">
         <div className="help__left">
           <div className="help__meme-text1" />
-          <img className="help__meme-cat" src='../../../img/memeCat.png' />
+          <img className="help__meme-cat" src={`${BASE_URL}/img/memeCat.png`} />
           <div className="help__meme-text2" />
         </div>
 

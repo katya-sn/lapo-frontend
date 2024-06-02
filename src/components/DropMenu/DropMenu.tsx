@@ -43,7 +43,7 @@ export const DropMenu = () => {
         >
           <p className="dropdown__text">{item.name}</p>
           <img
-            src={`${BASE_URL}${item.img}`}
+            src={`${BASE_URL}/${item.img}`}
             className='dropdown__img'
             alt={item.name}
           />
