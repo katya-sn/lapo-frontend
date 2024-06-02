@@ -1,6 +1,7 @@
 import { BigSectionsHeader } from '../../components/BigSectionsHeader';
 import { BreadCrumb } from '../../components/BreadCrumb';
 import { PhotoSlider } from '../../components/PhotoSlider';
+import { BASE_URL } from '../../utils/fetchProducts';
 import { team } from '../../utils/team';
 import './AboutUsPage.scss';
 
@@ -51,7 +52,7 @@ export const AboutUsPage = () => {
         <div className="about__team">
           {team.map(member => (
             <div className="about__team__card">
-              <img src={`../../../${member.photo}`} alt="teamPhoto" className="about__team__img" />
+              <img src={`${BASE_URL}/${member.photo}`} alt="teamPhoto" className="about__team__img" />
               <div className="about__team__text">
               <p className="about__team__name">{member.name}</p>
               <p className="about__team__position">{member.position}</p>
