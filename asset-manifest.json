@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/lapo-frontend/static/css/main.984a09aa.css",
-    "main.js": "/lapo-frontend/static/js/main.5aa89016.js",
+    "main.js": "/lapo-frontend/static/js/main.4c136152.js",
     "static/media/animal1.jpg": "/lapo-frontend/static/media/animal1.19563cba31da02df3b2d.jpg",
     "static/media/animal2.webp": "/lapo-frontend/static/media/animal2.ed0dfade223b6b2581e9.webp",
     "static/media/bigPaws.svg": "/lapo-frontend/static/media/bigPaws.16ef41fcbc18a5ffff8e.svg",
@@ -21,10 +21,10 @@
     "static/media/arrowRight.svg": "/lapo-frontend/static/media/arrowRight.e8e2322fe21e9c77830d.svg",
     "static/media/arrowRightHover.svg": "/lapo-frontend/static/media/arrowRightHover.9db63a5c2f7974e5b007.svg",
     "main.984a09aa.css.map": "/lapo-frontend/static/css/main.984a09aa.css.map",
-    "main.5aa89016.js.map": "/lapo-frontend/static/js/main.5aa89016.js.map"
+    "main.4c136152.js.map": "/lapo-frontend/static/js/main.4c136152.js.map"
   },
   "entrypoints": [
     "static/css/main.984a09aa.css",
-    "static/js/main.5aa89016.js"
+    "static/js/main.4c136152.js"
   ]
 }
