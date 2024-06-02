@@ -1,0 +1,49 @@
+.icon {
+  width: 40px;
+  aspect-ratio: 1/1;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+  &-lang {
+    background-image: url('../../../public/img/icons/arrowDown.svg');
+  }
+
+  &-like {
+    background-image: url('../../../public/img/icons/like.svg');
+  }
+
+  &-down {
+    background-image: url('../../../public/img/icons/arrowDown.svg');
+    width: 24px;
+  }
+
+  &-right {
+    background-image: url('../../../public/img/icons/arrowRight.svg');
+
+    &:hover {
+      background-image: url('../../../public/img/icons/arrowRightHover.svg');
+    }
+  }
+
+  &-up {
+    background-image: url('../../../public/img/icons/arrowDown.svg');
+    width: 24px;
+    transform: rotate(180deg);
+  }
+
+  &-bot {
+    background-image: url('./../../../public/img/icons/botLogo.svg');
+    width: 48px;
+  }
+
+  &-close {
+    background-image: url('../../../public/img/icons/close.svg');
+    width: 24px;
+  }
+
+  &-home {
+    width: 24px;
+    background-image: url('../../../public/img/icons/home.svg');
+  }
+}

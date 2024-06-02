@@ -1,0 +1,46 @@
+@import './../../styles/main.scss';
+
+.header {
+  position: relative;
+  background-color: $color-white;
+  margin-top: 24px;
+  border-radius: 100px;
+  margin-inline: 48px;
+  z-index: 1000;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    height: 72px;
+    justify-content: space-between;
+    margin-inline: 24px;
+  }
+
+  &__logo {
+    width: 223px;
+    height: 19px;
+    background-image: url('../../../public/img/logo.svg');
+  }
+
+  &__left {
+    display: flex;
+    gap: 95px;
+    align-items: center;
+  }
+
+  &__right {
+    display: flex;
+    gap: 32px;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__donate {
+    @extend %smallButton;
+    width: 124px;
+    @extend %button-text-medium;
+  }
+}
