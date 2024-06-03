@@ -17,9 +17,9 @@ export const PhotoSlider = () => {
         </div>
       </div>
       <div className="slider__content">
-        {/* {aboutUsPhoto.map(photo => (
+         {aboutUsPhoto.map(photo => (
           <img src={`${BASE_URL}/${photo}`} alt="aboutUsPhoto" className="slider__photo" />
-        ))} */}
+        ))} 
       </div>
     </div>
   )

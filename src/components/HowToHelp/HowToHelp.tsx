@@ -16,9 +16,8 @@ export const HowToHelp = () => {
       <SectionsHeader text="Як ще можна допомогти?" />
       <div className="help__content">
         <div className="help__left">
-          <div className="help__meme-text1" />
           <img className="help__meme-cat" src={`${BASE_URL}/img/memeCat.png`} />
-          <div className="help__meme-text2" />
+          <div className="help__meme-text" />
         </div>
 
         <div className="help__right">

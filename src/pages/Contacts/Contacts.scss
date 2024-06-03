@@ -1,0 +1,65 @@
+@import "./../../styles/main.scss";
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 128px;
+
+  &__info {
+    align-self: center;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    width: 550px;
+    margin-bottom: 72px;
+  }
+
+  &__text {
+    text-align: center;
+    @extend %h4;
+  }
+
+  &__map {
+    border: 3px solid $color-white;
+    border-radius: 32px;
+    margin-bottom: 48px;
+  }
+
+  &__links {
+    width: 685px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+
+    &__item {
+      display: flex;
+      gap: 24px;
+    }
+
+    &__icons {
+      display: flex;
+      gap: 8px;
+    }
+
+    &__circle {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: $color-white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition:
+        background-color 0.3s,
+        border 0.3s;
+      color: $color-orange-hover;
+    }
+
+    &__text {
+      @extend %h4;
+    }
+  }
+}

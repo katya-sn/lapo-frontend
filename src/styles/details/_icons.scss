@@ -6,7 +6,7 @@
   cursor: pointer;
 
   &-lang {
-    background-image: url('../../../public/img/icons/arrowDown.svg');
+    background-image: url('../../../public/img/icons/language.svg');
   }
 
   &-like {
@@ -45,5 +45,17 @@
   &-home {
     width: 24px;
     background-image: url('../../../public/img/icons/home.svg');
+  }
+
+  &-phone {
+    width: 48px;
+    border-radius: 50%;
+    background-color: $color-white;
+    background-image: url('../../../public/img/icons/phone.svg');
+  }
+
+  &-mail {
+    width: 48px;
+    background-image: url('../../../public/img/icons/mail.svg');
   }
 }

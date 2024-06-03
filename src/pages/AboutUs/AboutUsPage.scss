@@ -1,13 +1,10 @@
 @import './../../styles/main.scss';
 
 .about {
-  margin-top: 32px;
-
   &__section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 72px;
     margin-bottom: 128px;
   }
 

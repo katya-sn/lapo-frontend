@@ -35,7 +35,7 @@ export const Navbar = () => {
       <NavLink to="/pets" className={getLinkClass}>
         Знайти друга
       </NavLink>
-      <NavLink to="/contact" className={getLinkClass}>
+      <NavLink to="/contacts" className={getLinkClass}>
         Контакти
       </NavLink>
       <NavLink to="/game" className={getLinkClass}>

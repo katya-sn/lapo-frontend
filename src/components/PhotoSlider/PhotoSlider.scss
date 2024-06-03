@@ -2,11 +2,14 @@
 
 .slider {
   height: 610px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  margin-bottom: 72px;
 
   &__header {
     height: 56px;
-    display: flex;
-    justify-content: space-between;
   }
 
   &__dots {
