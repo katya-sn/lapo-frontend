@@ -1,4 +1,5 @@
 import { BASE_URL } from '../../utils/fetchProducts';
+import { BigButton, MediumButton } from '../Buttons';
 import { SectionsHeader } from '../SectionsHeader';
 import './HowToHelp.scss';
 
@@ -22,8 +23,8 @@ export const HowToHelp = () => {
 
         <div className="help__right">
           <div className="help__buttons">
-            <div className="button button-help">Разова допомога</div>
-            <div className="button button-help">Щомісячна допомога</div>
+            <MediumButton to='backend' leftIcon={false} rightIcon={false} text='Разова допомога' width='295' />
+            <MediumButton to='backend' leftIcon={false} rightIcon={false} text='Разова допомога' width='295' />
           </div>
 
           <div className="help__main">
@@ -35,7 +36,7 @@ export const HowToHelp = () => {
                   <div className="button button-donate">{sum}</div>
                 ))}
               </div>
-              <div className="button button-continue">Продовжити</div>
+              <BigButton to='backendPart' leftIcon={false} rightIcon={true} text='Продовжити' width='614'/>
             </div>
           </div>
           <p className="help__footer">Подаруй підтримку в два кліки!</p>

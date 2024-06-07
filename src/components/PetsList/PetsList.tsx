@@ -8,7 +8,8 @@ export const PetsList = () => {
     img: 'img/cardPhoto.png',
     sex: 'Хлопчик',
     age: '5',
-    size: 'Великий'
+    size: 'Великий',
+    sterilization: true,
   };
 
   return (

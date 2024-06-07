@@ -3,5 +3,6 @@ export type Pet = {
   img: string,
   sex: string,
   age: string | number,
-  size: string,
+  size?: string,
+  sterilization: boolean,
 }

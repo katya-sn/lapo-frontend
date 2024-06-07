@@ -20,11 +20,11 @@ export const PetCard: React.FC<Props> = ({ pet }) => {
 
       <div className="card__info">
       <p className="card__name">{pet.name}</p>
-      <p className="card__props">
+      <div className="card__props">
         <div className="card__prop">{pet.sex}</div>
         <div className="card__prop">{`${pet.age} років`}</div>
         <div className="card__prop">{pet.size}</div>
-      </p>
+      </div>
       </div>
     </div>
   );
