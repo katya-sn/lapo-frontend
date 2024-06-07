@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/lapo-frontend/static/css/main.c23b4824.css",
-    "main.js": "/lapo-frontend/static/js/main.4632515f.js",
+    "main.css": "/lapo-frontend/static/css/main.526296cf.css",
+    "main.js": "/lapo-frontend/static/js/main.99ae48a8.js",
     "static/media/animal1.jpg": "/lapo-frontend/static/media/animal1.19563cba31da02df3b2d.jpg",
     "static/media/animal2.webp": "/lapo-frontend/static/media/animal2.ed0dfade223b6b2581e9.webp",
     "static/media/bigPaws.svg": "/lapo-frontend/static/media/bigPaws.16ef41fcbc18a5ffff8e.svg",
@@ -11,6 +11,7 @@
     "static/media/pawsLine.svg": "/lapo-frontend/static/media/pawsLine.de67c8cc685f98db7b87.svg",
     "static/media/logo.svg": "/lapo-frontend/static/media/logo.c990a8726201e0698fe2.svg",
     "static/media/botLogo.svg": "/lapo-frontend/static/media/botLogo.fd8cb23643b5e7a5f7f8.svg",
+    "static/media/filters.svg": "/lapo-frontend/static/media/filters.bc696f1bd7b2a3825625.svg",
     "static/media/phone.svg": "/lapo-frontend/static/media/phone.aed2e6a93e89a058e745.svg",
     "static/media/like.svg": "/lapo-frontend/static/media/like.2f94fd637c28b71db156.svg",
     "static/media/language.svg": "/lapo-frontend/static/media/language.68731005da4688796678.svg",
@@ -21,11 +22,12 @@
     "static/media/arrowDown.svg": "/lapo-frontend/static/media/arrowDown.8d6bc76b7eac5a6cc30e.svg",
     "static/media/arrowRight.svg": "/lapo-frontend/static/media/arrowRight.e8e2322fe21e9c77830d.svg",
     "static/media/arrowRightHover.svg": "/lapo-frontend/static/media/arrowRightHover.9db63a5c2f7974e5b007.svg",
-    "main.c23b4824.css.map": "/lapo-frontend/static/css/main.c23b4824.css.map",
-    "main.4632515f.js.map": "/lapo-frontend/static/js/main.4632515f.js.map"
+    "static/media/arrowUp.svg": "/lapo-frontend/static/media/arrowUp.600435bebac171aeeb31.svg",
+    "main.526296cf.css.map": "/lapo-frontend/static/css/main.526296cf.css.map",
+    "main.99ae48a8.js.map": "/lapo-frontend/static/js/main.99ae48a8.js.map"
   },
   "entrypoints": [
-    "static/css/main.c23b4824.css",
-    "static/js/main.4632515f.js"
+    "static/css/main.526296cf.css",
+    "static/js/main.99ae48a8.js"
   ]
 }
