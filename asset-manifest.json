@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/lapo-frontend/static/css/main.526296cf.css",
-    "main.js": "/lapo-frontend/static/js/main.99ae48a8.js",
+    "main.css": "/lapo-frontend/static/css/main.51f9f290.css",
+    "main.js": "/lapo-frontend/static/js/main.33a350b5.js",
     "static/media/animal1.jpg": "/lapo-frontend/static/media/animal1.19563cba31da02df3b2d.jpg",
     "static/media/animal2.webp": "/lapo-frontend/static/media/animal2.ed0dfade223b6b2581e9.webp",
     "static/media/bigPaws.svg": "/lapo-frontend/static/media/bigPaws.16ef41fcbc18a5ffff8e.svg",
@@ -10,24 +10,34 @@
     "static/media/Mariupol-Bold.ttf": "/lapo-frontend/static/media/Mariupol-Bold.522dd3e8b2b7466575f2.ttf",
     "static/media/pawsLine.svg": "/lapo-frontend/static/media/pawsLine.de67c8cc685f98db7b87.svg",
     "static/media/logo.svg": "/lapo-frontend/static/media/logo.c990a8726201e0698fe2.svg",
+    "static/media/viber.svg": "/lapo-frontend/static/media/viber.4a6fe670d375e3ee2921.svg",
+    "static/media/share.svg": "/lapo-frontend/static/media/share.912ee27a25c2f3ec2feb.svg",
     "static/media/botLogo.svg": "/lapo-frontend/static/media/botLogo.fd8cb23643b5e7a5f7f8.svg",
+    "static/media/temper.svg": "/lapo-frontend/static/media/temper.84a6a4a14f2f710ae035.svg",
     "static/media/filters.svg": "/lapo-frontend/static/media/filters.bc696f1bd7b2a3825625.svg",
+    "static/media/behavior.svg": "/lapo-frontend/static/media/behavior.af0c129fda37dfaa02da.svg",
     "static/media/phone.svg": "/lapo-frontend/static/media/phone.aed2e6a93e89a058e745.svg",
+    "static/media/women.svg": "/lapo-frontend/static/media/women.4f430ececcf1067c7986.svg",
     "static/media/like.svg": "/lapo-frontend/static/media/like.2f94fd637c28b71db156.svg",
+    "static/media/heart.svg": "/lapo-frontend/static/media/heart.8056ad9982745387e9e9.svg",
+    "static/media/men.svg": "/lapo-frontend/static/media/men.fb540afd0c99139f855c.svg",
+    "static/media/sterllized.svg": "/lapo-frontend/static/media/sterllized.2f61382497d74515f09a.svg",
+    "static/media/age.svg": "/lapo-frontend/static/media/age.29d0cc6c56648e64b4f2.svg",
     "static/media/language.svg": "/lapo-frontend/static/media/language.68731005da4688796678.svg",
     "index.html": "/lapo-frontend/index.html",
     "static/media/mail.svg": "/lapo-frontend/static/media/mail.ad21d59751a4ff2bd7d2.svg",
+    "static/media/vaccinated.svg": "/lapo-frontend/static/media/vaccinated.6af5c766256e40f01efb.svg",
     "static/media/home.svg": "/lapo-frontend/static/media/home.1db52049eda758108744.svg",
-    "static/media/close.svg": "/lapo-frontend/static/media/close.67162344a2bddfc70d98.svg",
+    "static/media/close.svg": "/lapo-frontend/static/media/close.48e0625971da91ceb7ca.svg",
     "static/media/arrowDown.svg": "/lapo-frontend/static/media/arrowDown.8d6bc76b7eac5a6cc30e.svg",
     "static/media/arrowRight.svg": "/lapo-frontend/static/media/arrowRight.e8e2322fe21e9c77830d.svg",
     "static/media/arrowRightHover.svg": "/lapo-frontend/static/media/arrowRightHover.9db63a5c2f7974e5b007.svg",
     "static/media/arrowUp.svg": "/lapo-frontend/static/media/arrowUp.600435bebac171aeeb31.svg",
-    "main.526296cf.css.map": "/lapo-frontend/static/css/main.526296cf.css.map",
-    "main.99ae48a8.js.map": "/lapo-frontend/static/js/main.99ae48a8.js.map"
+    "main.51f9f290.css.map": "/lapo-frontend/static/css/main.51f9f290.css.map",
+    "main.33a350b5.js.map": "/lapo-frontend/static/js/main.33a350b5.js.map"
   },
   "entrypoints": [
-    "static/css/main.526296cf.css",
-    "static/js/main.99ae48a8.js"
+    "static/css/main.51f9f290.css",
+    "static/js/main.33a350b5.js"
   ]
 }
