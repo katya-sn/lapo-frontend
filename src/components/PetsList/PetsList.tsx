@@ -1,28 +1,21 @@
-import { Pet } from '../../types/Pet';
+import { catData } from '../../utils/catData';
 import { PetCard } from '../PetCard';
 import './PetsList.scss';
 
 export const PetsList = () => {
-  const examplePet: Pet = {
-    name: 'Барбос',
-    img: 'img/cardPhoto.png',
-    sex: 'Хлопчик',
-    age: '5',
-    size: 'Великий',
-    sterilization: true,
-  };
+  const pet  = catData[0];
 
   return (
     <div className="list">
-      <PetCard pet={examplePet} />
-      <PetCard pet={examplePet} />
-      <PetCard pet={examplePet} />
-      <PetCard pet={examplePet} />
-      <PetCard pet={examplePet} />
-      <PetCard pet={examplePet} />
-      <PetCard pet={examplePet} />
-      <PetCard pet={examplePet} />
-      <PetCard pet={examplePet} />
+      <PetCard pet={pet} />
+      <PetCard pet={pet} />
+      <PetCard pet={pet} />
+      <PetCard pet={pet} />
+      <PetCard pet={pet} />
+      <PetCard pet={pet} />
+      <PetCard pet={pet} />
+      <PetCard pet={pet} />
+      <PetCard pet={pet} />
     </div>
   )
 }

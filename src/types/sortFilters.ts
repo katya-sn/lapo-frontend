@@ -22,5 +22,5 @@ export const sexFilter = {
 export const ageFilter = {
   young: 'До 1 року',
   teenager: '1-5 років',
-  old: '5+ років'
+  old: '5+ років',
 }

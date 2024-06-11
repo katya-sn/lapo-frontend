@@ -1,8 +1,11 @@
 export type Pet = {
+  id: string,
+  category: string,
   name: string,
-  img: string,
   sex: string,
   age: string | number,
   size?: string,
-  sterilization: boolean,
+  sterilized: string,
+  vaccinated: string,
+  images: string[],
 }

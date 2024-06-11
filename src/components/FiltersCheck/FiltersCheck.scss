@@ -1,4 +1,4 @@
-@import './../../styles/main.scss';
+@import "./../../styles/main.scss";
 
 .checkbox {
   display: inline-flex;
@@ -9,6 +9,10 @@
   border-radius: 8px;
   padding-inline: 16px;
   @extend %button-text-regular;
+
+  &--checked {
+    background-color: $color-light-orange;
+  }
 
   input[type="checkbox"] {
     display: none;

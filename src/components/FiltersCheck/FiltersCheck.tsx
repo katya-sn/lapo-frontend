@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { Filters } from '../../types/sortFilters';
 import './FiltersCheck.scss';
 
@@ -23,7 +24,9 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   return (
     <>
       {Object.entries(filterData).map(([key, value]) => (
-        <label className="checkbox" key={key}>
+        <label className={classNames("checkbox", {
+          'checkbox--checked': selectedFilters.includes(key),
+        })} key={key}>
           <input
             type="checkbox"
             id="filterCheckbox"

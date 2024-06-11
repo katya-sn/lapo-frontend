@@ -46,6 +46,14 @@ export const Filter = () => {
     return undefined;
   };
 
+  const giveParamForBoolean = (k: string) => {
+    if (k === 'sterilized') {
+      return 'Стерилозовані'
+    }
+
+    return 'Вакциновані'
+  }
+
   return (
     <div className="filter">
       <div className="filter__buttons">
@@ -66,26 +74,29 @@ export const Filter = () => {
         />
       </div>
 
-      <div className="filter__list">
-      {Object.entries(filters).map(([key, value]) => {
-        if (Array.isArray(value) && value.length > 0) {
-          return value.map((item) => (
-            <div className="filter__item" key={`${key}-${item}`}>
-              <p className="filter__item__text">{findParam(`${item}`)}</p>
-              <div className="icon icon-close" onClick={() => handleRemoveFilter(key as FilterType, item)}></div>
-            </div>
-          ));
-        } else if (typeof value === 'boolean' && value) {
-          return (
-            <div className="filter__item" key={key}>
-              <p className="filter__item__text">{key}</p>
-              <div className="icon icon-close" onClick={() => handleRemoveFilter(key as FilterType, true)}></div>
-            </div>
-          );
-        }
-        return null;
-      })}
-      </div>
+      
+      {numOfFilters > 0 && (
+        <div className="filter__list">
+        {Object.entries(filters).map(([key, value]) => {
+          if (Array.isArray(value) && value.length > 0) {
+            return value.map((item) => (
+              <div className="filter__item" key={`${key}-${item}`}>
+                <p className="filter__item__text">{findParam(`${item}`)}</p>
+                <div className="icon icon-close" onClick={() => handleRemoveFilter(key as FilterType, item)}></div>
+              </div>
+            ));
+          } else if (typeof value === 'boolean' && value) {
+            return (
+              <div className="filter__item" key={key}>
+                <p className="filter__item__text">{giveParamForBoolean(`${key}`)}</p>
+                <div className="icon icon-close" onClick={() => handleRemoveFilter(key as FilterType, true)}></div>
+              </div>
+            );
+          }
+          return null;
+        })}
+        </div>
+      )}
     </div>
   );
 };

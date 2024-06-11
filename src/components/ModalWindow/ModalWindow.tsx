@@ -127,11 +127,11 @@ export const ModalWindow: React.FC<Props> = ({ isOpen, onClose }) => {
         </div>
 
         <div className="window__footer">
-          <button onClick={applyFilters} disabled={isApplyDisabled} className="mediumButton">
-            <p className="text">Застосувати</p>
-          </button>
           <button onClick={clearFilters} disabled={isApplyDisabled} className="window__clear">
             <p className="window__clear__text">Очистити</p>
+          </button>
+          <button onClick={applyFilters} disabled={isApplyDisabled} className="mediumButton">
+            <p className="text">Застосувати</p>
           </button>
         </div>
 

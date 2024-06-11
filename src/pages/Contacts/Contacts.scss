@@ -22,7 +22,7 @@
   &__map {
     border: 3px solid $color-white;
     border-radius: 32px;
-    margin-bottom: 48px;
+    margin-bottom: 56px;
   }
 
   &__links {
@@ -44,8 +44,8 @@
     }
 
     &__circle {
-      width: 48px;
-      height: 48px;
+      width: 56px;
+      height: 56px;
       border-radius: 50%;
       background-color: $color-white;
       display: flex;
