@@ -44,7 +44,12 @@
 
     &-form {
       background-color: $color-white;
+      background-size: 24px;
       height: 24px;
+    }
+
+    &-filter {
+      width: 32px;
     }
   }
 
@@ -86,5 +91,15 @@
     border-radius: 50%;
     background-color: $color-white;
     background-image: url('./../../../public/img/icons/heart.svg');
+  }
+
+  &-bus {
+    width: 24px;
+    background-image: url('./../../../public/img/icons/bus.svg');
+  }
+
+  &-car {
+    width: 24px;
+    background-image: url('./../../../public/img/icons/car.svg');
   }
 }

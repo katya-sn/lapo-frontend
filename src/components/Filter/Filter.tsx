@@ -66,7 +66,8 @@ export const Filter = () => {
           className="filter__icon"
           onClick={() => setIsFiltersOpen(!isFiltersOpen)}
         >
-          <div className="filter__counter">{numOfFilters}</div>
+          
+            <div className="filter__counter">{numOfFilters}</div>
         </div>
         <ModalWindow
           isOpen={isFiltersOpen}

@@ -31,7 +31,7 @@ export const Categories = () => {
         ))}
       </div>
       <div className="categories__footer">
-        <BigButton to='/pets' leftIcon={false} rightIcon={true} text='Переглянути всіх котиків притулку' />
+        <BigButton to='/pets' leftIcon={false} rightIcon={true} text='Переглянути всіх хвостиків притулку' />
       </div>
     </div>
   )

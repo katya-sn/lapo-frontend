@@ -25,6 +25,42 @@
     margin-bottom: 56px;
   }
 
+  &__carts {
+    position: absolute;
+    right: 48px;
+    top: 530px;
+    width: 381px;
+    height: 144px;
+    border-radius: 16px;
+    background-color: $color-warm-yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__item {
+      padding-inline: 16px;
+      display: flex;
+      gap: 16px;
+      height: 56px;
+      width: 100%;
+      align-items: center;
+
+      &:first-child {
+        border-bottom: 0.7px solid $color-middle-grey;
+      }
+    }
+
+    &__text {
+      
+      font-family: "Mariupol-Regular", sans-serif;
+      font-size: 16px;
+      line-height: 120%;
+      letter-spacing: 0;
+      color: $color-black;
+    }
+  }
+
   &__links {
     width: 685px;
     align-self: center;

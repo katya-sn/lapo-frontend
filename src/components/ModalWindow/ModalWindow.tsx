@@ -25,7 +25,6 @@ export const ModalWindow: React.FC<Props> = ({ isOpen, onClose }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const {filters, setFilters} = useContext(GlobalContext);
 
-  const [isApplyDisabled, setIsApplyDisabled] = useState(true);
   const [filteredPets, setFilteredPets] = useState([])
 
   const onCheckboxChange = (type: FilterType, value: string, checked: boolean) => {
@@ -76,20 +75,13 @@ export const ModalWindow: React.FC<Props> = ({ isOpen, onClose }) => {
     })
   }
 
-  useEffect(() => {
-    const hasFilters = Object.values(filters).some(
-      (value) => (Array.isArray(value) && value.length > 0) || (typeof value === 'boolean' && value)
-    );
-    setIsApplyDisabled(!hasFilters);
-  }, [filters]);
-
   return (
     <>
       {isOpen && <div className="overlay overlay-for-modal" />}
       <div className={style}>
         <div className="window__header">
           <p className="window__header__text">Фільтри</p>
-          <div className="icon icon-close" onClick={onClose}></div>
+          <div className="icon icon-close icon-close-form" onClick={onClose}></div>
         </div>
 
         <div className="window__filters">
@@ -127,10 +119,10 @@ export const ModalWindow: React.FC<Props> = ({ isOpen, onClose }) => {
         </div>
 
         <div className="window__footer">
-          <button onClick={clearFilters} disabled={isApplyDisabled} className="window__clear">
+          <button onClick={clearFilters} className="window__clear">
             <p className="window__clear__text">Очистити</p>
           </button>
-          <button onClick={applyFilters} disabled={isApplyDisabled} className="mediumButton">
+          <button onClick={applyFilters} className="mediumButton">
             <p className="text">Застосувати</p>
           </button>
         </div>

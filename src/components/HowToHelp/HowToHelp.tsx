@@ -24,7 +24,7 @@ export const HowToHelp = () => {
         <div className="help__right">
           <div className="help__buttons">
             <MediumButton to='backend' leftIcon={false} rightIcon={false} text='Разова допомога' width='295' />
-            <MediumButton to='backend' leftIcon={false} rightIcon={false} text='Разова допомога' width='295' />
+            <MediumButton to='backend' leftIcon={false} rightIcon={false} text='Щомісячна допомога' width='295' />
           </div>
 
           <div className="help__main">
