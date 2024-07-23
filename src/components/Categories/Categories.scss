@@ -15,6 +15,7 @@
   }
 
   &__category {
+    overflow: hidden;
     grid-column: span 12;
     background-color: $color-warm-yellow;
     border-radius: 40px;
@@ -24,6 +25,19 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s linear;
+
+    &:hover {
+     // background-color: $color-orange-hover;
+
+     // .categories__category__title {
+    //    color: $color-white;
+    //  }
+      .categories__category__photo {
+        transform: scale(1.1);
+      }
+    }
 
     &__title {
       @extend %h3;
@@ -37,14 +51,10 @@
       overflow: hidden;
       display: flex;
       justify-content: center;
+      transition: transform 2s ease;
     }
 
-    /* &__img {
-      max-width: 100%;
-      height: auto;
-    } */
-
-    &__dog {
+    &__dogs {
       max-width: 100%;
       height: auto;
     }

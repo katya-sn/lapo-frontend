@@ -13,23 +13,50 @@
   position: relative;
 
   &__img {
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
+    border-radius: 16px 16px 0 0;
     padding: 4px;
     width: 324px;
     height: 292px;
     object-fit: cover;
+    transition: transform 0.3s linear;
+
+    &:hover {
+      transform: scale(1.05);
+      border: 1px solid $color-white;
+    }
   }
 
-  &__icon {
-    width: 56px;
+  &__like {
     position: absolute;
     top: 16px;
     right: 16px;
-    aspect-ratio: 1/1;
     cursor: pointer;
-    background-image: url("../../../public/img/icons/like.svg");
-    background-size: cover;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      color: $color-orange;
+    }
+
+    &:hover {
+      background-color: $color-light-orange;
+
+      svg {
+        color: $color-orange;
+      }
+    }
+
+    &:active {
+      background-color: $color-white;
+      svg {
+        color: $color-orange;
+      }
+    }
   }
 
   &__info {
