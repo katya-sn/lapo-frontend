@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/lapo-frontend/static/css/main.8b8b1a39.css",
-    "main.js": "/lapo-frontend/static/js/main.d717c9db.js",
+    "main.css": "/lapo-frontend/static/css/main.7d1373f9.css",
+    "main.js": "/lapo-frontend/static/js/main.6662bb2c.js",
     "static/media/bigPaws.svg": "/lapo-frontend/static/media/bigPaws.16ef41fcbc18a5ffff8e.svg",
     "static/media/Mariupol-Regular.ttf": "/lapo-frontend/static/media/Mariupol-Regular.1b8a8b1314f29e35c823.ttf",
     "static/media/Mariupol-Medium.ttf": "/lapo-frontend/static/media/Mariupol-Medium.5a8760bb409d1b08c211.ttf",
@@ -41,11 +41,11 @@
     "static/media/success.svg": "/lapo-frontend/static/media/success.2f0c1dd916b2964ad051.svg",
     "static/media/arrowRight.svg": "/lapo-frontend/static/media/arrowRight.e8e2322fe21e9c77830d.svg",
     "static/media/arrowUp.svg": "/lapo-frontend/static/media/arrowUp.600435bebac171aeeb31.svg",
-    "main.8b8b1a39.css.map": "/lapo-frontend/static/css/main.8b8b1a39.css.map",
-    "main.d717c9db.js.map": "/lapo-frontend/static/js/main.d717c9db.js.map"
+    "main.7d1373f9.css.map": "/lapo-frontend/static/css/main.7d1373f9.css.map",
+    "main.6662bb2c.js.map": "/lapo-frontend/static/js/main.6662bb2c.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b8b1a39.css",
-    "static/js/main.d717c9db.js"
+    "static/css/main.7d1373f9.css",
+    "static/js/main.6662bb2c.js"
   ]
 }
