@@ -202,7 +202,7 @@ export const GamePage = () => {
                       </svg>
                     </div>
                     <img
-                      src={`${MEDIA_URL}${pet.photo[0]}`}
+                      src={`${BASE_URL}${pet.photo[0]}`}
                       alt={pet.id}
                       className="game__photo"
                     />
