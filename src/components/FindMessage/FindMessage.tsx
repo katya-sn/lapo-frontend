@@ -14,7 +14,7 @@ export const FindMessage = () => {
     <div className="find-message">
       {isMessageOpen && (
         <>
-          <div
+          <button
             className="icon icon-close icon-close-form"
             onClick={() => setIsMessageOpen(false)}
           />
@@ -23,7 +23,7 @@ export const FindMessage = () => {
           </div>
         </>
       )}
-      <div
+      <button
         className="icon icon-bot"
         onClick={() => setIsSosFormOpen(true)}
       />

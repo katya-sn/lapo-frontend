@@ -8,9 +8,9 @@ type Props = {
 export const BigSectionsHeader: React.FC<Props> = ({ text }) => {
   return (
     <div className="big-sections-header">
-      <div className="big-sections-header__text">{text[0]}</div>
+      <h4 className="big-sections-header__text">{text[0]}</h4>
       <div className="big-sections-header__paws"/>
-      <div className="big-sections-header__text">{text[1]}</div>
+      <h4 className="big-sections-header__text">{text[1]}</h4>
     </div>
   )
 }

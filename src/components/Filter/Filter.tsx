@@ -81,10 +81,10 @@ export const Filter:React.FC<Props> = ({updateSearchParams}) => {
               return value.map((item) => (
                 <div className="filter__item" key={`${key}-${item}`} >
                   <p className="filter__item__text">{findParam(`${item}`)}</p>
-                  <div
+                  <button
                     className="icon icon-close"
                     onClick={() => updateSearchParams({ [key]: value.filter(param => param !== item) })}
-                  ></div>
+                  ></button>
                 </div>
               ));
             } else if (typeof value === "boolean" && value === true) {
@@ -93,10 +93,10 @@ export const Filter:React.FC<Props> = ({updateSearchParams}) => {
                   <p className="filter__item__text">
                     {giveParamForBoolean(`${key}`)}
                   </p>
-                  <div
+                  <button
                     className="icon icon-close"
                     onClick={() => updateSearchParams({ [key]: false })}
-                  ></div>
+                  ></button>
                 </div>
               );
             }

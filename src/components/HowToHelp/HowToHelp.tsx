@@ -67,7 +67,7 @@ export const HowToHelp = () => {
       <div className="help__content">
         <div className="help__left">
           <img className="help__meme-cat" src={`${BASE_URL}/img/memeCat.png`} />
-          <div className="help__meme-text" />
+          <img className="help__meme-text" />
         </div>
 
         <div className="help__right">
@@ -96,14 +96,14 @@ export const HowToHelp = () => {
             <div className="help__main__select">
               <div className="help__main__options">
                 {donate.map((option) => (
-                  <div
+                  <button
                     key={option.sum}
                     className={classNames("help__main__sum", {
                       "help__main__sum--active": selectSum === option.sum,
                       "help__main__sum--disabled": option.sum === 'Інша сума' && paymentType === 'subscribe',
                     })}
                     onClick={() => handleItemSelect(option)}
-                  >{option.sum}</div>
+                  >{option.sum}</button>
                 ))}
               </div>
               <BigButton

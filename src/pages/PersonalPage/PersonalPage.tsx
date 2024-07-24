@@ -298,7 +298,7 @@ export const PersonalPage = () => {
       <div className="personal__adopt">
         <div className="personal__adopt__left">
           <h3 className="personal__adopt__text">
-            Будь ласка, зверни свою увагу!
+            Будь ласка, <br />зверни свою увагу!
           </h3>
           <LargeButton
             leftIcon={false}

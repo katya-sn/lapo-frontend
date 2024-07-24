@@ -1,7 +1,7 @@
 import React from "react";
 import "./ShareModal.scss";
 import { Pet } from "../../types/Pet";
-import { MEDIA_URL } from "../../utils/fetchProducts";
+import { BASE_URL, MEDIA_URL } from "../../utils/fetchProducts";
 
 type Props = {
   closeModal: () => void;
@@ -18,8 +18,6 @@ export const ShareModal: React.FC<Props> = ({ closeModal, pet, photo }) => {
   //const ngrokUrl = 'https://aafc-79-110-133-41.ngrok-free.app'; // замініть на ваш HTTPS URL від ngrok
   //const pagePath = window.location.pathname + window.location.hash;
   //const pageUrl = encodeURIComponent(`${ngrokUrl}${pagePath}`);
-
-  console.log(pageUrl);
 
   const handleCopyLink = async (): Promise<void> => {
     try {
@@ -76,7 +74,7 @@ export const ShareModal: React.FC<Props> = ({ closeModal, pet, photo }) => {
         <div className="share__info">
           <img
             className="share__info__photo"
-            src={`${MEDIA_URL}${photo[0]}`}
+            src={`${BASE_URL}${photo[0]}`}
             alt="pet-photo"
           />
           <div className="share__info__params">

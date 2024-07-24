@@ -33,7 +33,7 @@ export const Reasons = () => {
               'reasons__wrapper--right': index % 2 !== 0,
             })}
           >
-            <div
+            <img
               className="reasons__img"
               style={{ backgroundImage: `url('${BASE_URL}/${reason.image}')` }}
             />

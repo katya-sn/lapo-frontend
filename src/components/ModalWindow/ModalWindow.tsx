@@ -24,7 +24,6 @@ export const ModalWindow: React.FC<Props> = ({
   const { filters } = useContext(GlobalContext);
   const { pathname } = useLocation();
 
-  const category = pathname.split("/").at(2);
 
   const style = isOpen ? "window-open" : "window";
   const [sex, setSex] = useState<string[]>([]);
@@ -83,10 +82,10 @@ export const ModalWindow: React.FC<Props> = ({
       <div className={style}>
         <div className="window__header">
           <p className="window__header__text">Фільтри</p>
-          <div
+          <button
             className="icon icon-close icon-close-form"
             onClick={onClose}
-          ></div>
+          ></button>
         </div>
 
         <div className="window__filters">
