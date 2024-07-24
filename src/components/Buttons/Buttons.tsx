@@ -94,32 +94,14 @@ export const MediumButton: React.FC<Props> = ({
   const renderContent = () => (
     <>
       {leftIcon && (
-        <svg
-          width="32"
-          height="32"
-          viewBox="0 0 32 32"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M14.4373 16L21.0373 22.6L19.152 24.4866L10.6667 16L19.152 7.51465L21.0373 9.39998L14.4373 16Z"
-            fill="currentColor"
-          />
+        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11.328 12L16.278 16.95L14.864 18.365L8.5 12L14.864 5.63599L16.278 7.04999L11.328 12Z" fill="currentColor"/>
         </svg>
       )}
       <p className="text">{text}</p>
       {rightIcon && (
-        <svg
-          width="32"
-          height="32"
-          viewBox="0 0 32 32"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M17.5626 16L10.9626 9.39999L12.848 7.51599L21.3333 16L12.848 24.4853L10.9626 22.5987L17.5626 16Z"
-            fill="currentColor"
-          />
+        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.672 12L8.722 7.04996L10.136 5.63696L16.5 12L10.136 18.364L8.722 16.949L13.672 12Z" fill="currentColor"/>
         </svg>
       )}
     </>

@@ -42,7 +42,7 @@ export const Favourites: React.FC<Props> = ({ closeBar }) => {
               {likedPets.map((pet) => (
                 <li className="favs__item" key={pet.name}>
                   <img
-                    src={`${BASE_URL}${pet.photo[0]}`}
+                    src={`${BASE_URL}${pet.photo}`}
                     alt="petPhoto"
                     className="favs__item__img"
                   />

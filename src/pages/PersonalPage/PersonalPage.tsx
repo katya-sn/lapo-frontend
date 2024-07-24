@@ -51,7 +51,7 @@ export const PersonalPage = () => {
       dispatch(animalActions.fetchCats(`?sex=${pet?.sex}`));
      };
      if (category === "dogs") {
-      dispatch(animalActions.fetchDogs(`?sex=${sex}`));
+      dispatch(animalActions.fetchDogs(`?sex=${pet?.sex}`));
     } 
    };
   
@@ -179,7 +179,7 @@ export const PersonalPage = () => {
                   <li key={index}>
                     <img
                       key={image}
-                      src={`${MEDIA_URL}${image}`}
+                      src={`${BASE_URL}${image}`}
                       alt={`${index} + 1`}
                       onClick={() => setMainPhoto(image)}
                       className="personal__photo personal__photo-small"
