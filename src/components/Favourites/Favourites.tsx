@@ -11,7 +11,7 @@ type Props = {
 
 export const Favourites: React.FC<Props> = ({ closeBar }) => {
   const dispatch = useAppDispatch();
-  const { pets } =
+  const { likedPets } =
     useAppSelector((state) => state.likedPets);
 
 
@@ -37,12 +37,12 @@ export const Favourites: React.FC<Props> = ({ closeBar }) => {
           </button>
         </div>
         <div className="favs__content">
-          {pets.length > 0 ? (
+          {likedPets.length > 0 ? (
             <ul className="favs__items">
-              {pets.map((pet) => (
+              {likedPets.map((pet) => (
                 <li className="favs__item" key={pet.name}>
                   <img
-                    src={`${MEDIA_URL}${pet.photo[0]}`}
+                    src={`${BASE_URL}${pet.photo[0]}`}
                     alt="petPhoto"
                     className="favs__item__img"
                   />

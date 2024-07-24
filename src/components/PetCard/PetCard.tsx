@@ -2,7 +2,7 @@ import React from "react";
 import "./PetCard.scss";
 import { Pet } from "../../types/Pet";
 import { Link, useLocation } from "react-router-dom";
-import { MEDIA_URL } from "../../utils/fetchProducts";
+import { BASE_URL, MEDIA_URL } from "../../utils/fetchProducts";
 import { useAppDispatch, useAppSelector } from "../../app/hook";
 import * as likedActions from "../../features/likedSlice";
 import { isAnimalLiked } from "../../api/likedApi";
@@ -15,8 +15,8 @@ type Props = {
 export const PetCard: React.FC<Props> = ({ pet }) => {
   const location = useLocation();
   const dispatch = useAppDispatch();
-  const { pets } = useAppSelector(state => state.likedPets);
-  const isLiked = isAnimalLiked(pets, pet.category, pet.id);
+  const { likedPets } = useAppSelector(state => state.likedPets);
+  const isLiked = isAnimalLiked(likedPets, pet.category, pet.id);
 
   const getAbsolutePath = (category: string, id: string) => {
     if (location.pathname.includes(category)) {
@@ -46,7 +46,7 @@ export const PetCard: React.FC<Props> = ({ pet }) => {
     <div className="card" key={pet.name}>
       <Link to={getAbsolutePath(pet.category, pet.id)}>
         <img
-          src={`${MEDIA_URL}${pet.photo}`}
+          src={`${BASE_URL}${pet.photo}`}
           alt="petPhoto"
           className="card__img"
         />

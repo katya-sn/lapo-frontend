@@ -32,10 +32,10 @@
     justify-content: center;
 
     &:hover {
-      background-color: $color-orange;
+      background-color: $color-light-orange;
 
       svg {
-        color: $color-white;
+        color: $color-orange;
       }
     }
 

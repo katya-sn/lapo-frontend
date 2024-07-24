@@ -10,7 +10,7 @@ import { useAppSelector } from "../../app/hook";
 export const Header = () => {
   const { scrollToSection } = useContext(GlobalContext);
   const [isFavsOpen, setIsFavsOpen] = useState(false);
-  const { pets } = useAppSelector(state => state.likedPets);
+  const { likedPets } = useAppSelector(state => state.likedPets);
   return (
     <>
       <div className="header">
@@ -55,8 +55,8 @@ export const Header = () => {
                     />
                   )}
                 </svg>
-                {pets.length > 0 && (
-                  <p className="header__like__counter">{pets.length}</p> 
+                {likedPets.length > 0 && (
+                  <p className="header__like__counter">{likedPets.length}</p> 
                 )}
               </button>
             </div>
