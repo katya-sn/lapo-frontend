@@ -1,8 +1,8 @@
 export const BASE_URL = process.env.PUBLIC_URL;
 //export const API_URL = "http://localhost:8000/api";
-export const API_URL = "https://slick-bottles-stare.loca.lt/api";
+export const API_URL = "https://catdog-1.onrender.com/api";
 //export const MEDIA_URL = "http://localhost:8000";
-export const MEDIA_URL = "https://slick-bottles-stare.loca.lt";
+export const MEDIA_URL = "https://catdog-1.onrender.com";
 
 type httpMethod = "GET" | "POST" | "DELETE";
 
