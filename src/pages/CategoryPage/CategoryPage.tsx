@@ -29,6 +29,7 @@ export const CategoryPage = () => {
       dispatch(animalActions.fetchDogs(location.search.toString()));
     } else {
       dispatch(animalActions.fetchAnimals(location.search.toString()));
+      console.log(location.search.toString());
     }
   };
 

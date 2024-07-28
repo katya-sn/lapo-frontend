@@ -264,6 +264,15 @@
       left: 264px;
       bottom: 0;
     }
+
+    &__resp {
+      width: 324px;
+      height: 122px;
+      position: absolute;
+      bottom: 28px;
+      z-index: 2;
+      right: 149px;
+    }
   }
 
   &__similar {

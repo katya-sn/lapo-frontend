@@ -25,3 +25,14 @@ export const ageFilter = {
   teenager: '1-5 років',
   old: '5+ років',
 }
+
+export const getSexParam = (sex: string) => {
+  let result = '';
+  Object.entries(sexFilter).forEach(([key, value]) => {
+    if (value === sex) {
+      result = key;
+    }
+  })
+
+  return result;
+}

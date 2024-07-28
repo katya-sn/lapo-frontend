@@ -39,9 +39,7 @@ export const PetCard: React.FC<Props> = ({ pet }) => {
             fill="currentColor"
           /> : <path d="M12.001 4.52894C13.1436 3.50614 14.6345 2.95981 16.1674 3.00221C17.7003 3.04462 19.1587 3.67254 20.243 4.75694C21.3264 5.84013 21.9543 7.29669 21.9982 8.82803C22.0421 10.3594 21.4986 11.8495 20.479 12.9929L11.999 21.4849L3.52102 12.9929C2.50028 11.8489 1.95623 10.3575 2.00056 8.82492C2.04489 7.29235 2.67425 5.83489 3.75942 4.75177C4.84459 3.66865 6.30323 3.04205 7.83589 3.00061C9.36854 2.95917 10.8589 3.50604 12.001 4.52894Z" fill="#FF5631"/>
   }
-
-  const years = pet.age === "1" ? "1 рік" : `${pet.age} роки`;
-
+  
   return (
     <div className="card" key={pet.name}>
       <Link to={getAbsolutePath(pet.category, pet.id)}>
@@ -73,7 +71,7 @@ export const PetCard: React.FC<Props> = ({ pet }) => {
         <p className="card__name">{pet.name}</p>
         <div className="card__props">
           <div className="card__prop">{pet.sex}</div>
-          <div className="card__prop">{`${years}`}</div>
+          <div className="card__prop">{pet.age}</div>
           {pet.size && <div className="card__prop">{pet.size.split(' ')[0]}</div>}
         </div>
       </div>

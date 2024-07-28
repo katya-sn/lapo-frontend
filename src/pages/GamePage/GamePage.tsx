@@ -23,7 +23,7 @@ export const GamePage = () => {
   const [isSecondTrue, setIsSecondTrue] = useState<boolean>(false);
 
   const gameRef = useRef<HTMLDivElement>(null);
-  const checkboxes = document.querySelectorAll(".game__checkbox");
+  const checkboxes = document.querySelectorAll(".game__checkboxes");
   const infos = document.querySelectorAll(".game__info");
   const buttons = document.querySelectorAll(".game__button");
   const carts = document.querySelectorAll(".game__cart");

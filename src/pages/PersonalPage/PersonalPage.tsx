@@ -16,6 +16,7 @@ import { PetCard } from "../../components/PetCard";
 import * as animalActions from "../../features/animalSlice";
 import { isAnimalLiked } from "../../api/likedApi";
 import * as likedActions from "../../features/likedSlice";
+import { getSexParam } from "../../types/sortFilters";
 
 export const PersonalPage = () => {
   const { pathname } = useLocation();
@@ -27,6 +28,7 @@ export const PersonalPage = () => {
   const { pets, cats, dogs } = useAppSelector(state => state.animals);
   const dispatch = useAppDispatch();
   const { likedPets } = useAppSelector(state => state.likedPets);
+  const [similarPets, setSimilarPets] = useState<Pet[]>([]);
 
   const [isShareModalOpen, setIsShareModalOpen] = useState(false);
   const [mainPhoto, setMainPhoto] = useState('');
@@ -36,7 +38,7 @@ export const PersonalPage = () => {
   const [sterilized, setSterilized] = useState('');
 
   useEffect(() => {
-    fetchApi();
+    fetchSimilar()
     if (pet && pet.sex === 'Дівчинка') {
       setVaccinated(pet.vaccinated === true ? 'Вакцинована' : 'Не вакцинована');
       setSterilized(pet.sterilized === true ? 'Стерилізована' : 'Не стерилізована');
@@ -46,20 +48,31 @@ export const PersonalPage = () => {
     }
   }, [pet]);
 
-   const fetchApi = () => {
+   /* const fetchApi = () => {
     if (category === "cats") {
       dispatch(animalActions.fetchCats(`?sex=${pet?.sex}`));
      };
      if (category === "dogs") {
       dispatch(animalActions.fetchDogs(`?sex=${pet?.sex}`));
     } 
-   };
+   }; */
+  
+  const fetchSimilar = () => {
+    if (pet) {
+      const sexParam = getSexParam(pet.sex);
+      if (category === 'cats') {
+        dispatch(animalActions.fetchCats(`?sex=${sexParam}`));
+      } else {
+        dispatch(animalActions.fetchDogs(`?sex=${sexParam}`));
+      }
+    }
+  } 
   
    const { similar } = (() => {
     if (category === "cats") {
-      return { similar: cats };
+      return { similar: cats};
     } else {
-      return { similar: dogs };
+      return { similar: dogs};
      }
   })();
 
@@ -68,7 +81,7 @@ export const PersonalPage = () => {
     setIsLoading(true);
     if (petId && category) {
       const fetchPromise = getAnimalById(category, petId)
-        .then((data) => { setPet(data); setMainPhoto(data.photo[0]) })
+        .then((data) => { setPet(data); setMainPhoto(data.photo[0])})
         .catch((error) => console.error("fetching error", error));
   
       const delayPromise = new Promise((resolve) => setTimeout(resolve, 700));
@@ -318,13 +331,18 @@ export const PersonalPage = () => {
             alt="cat-adopt-promo"
             className="personal__adopt__cat"
           />
+          <img
+            src={`${BASE_URL}/img/response.svg`}
+            alt="be-response"
+            className="personal__adopt__resp"
+          />
         </div>
       </div>
 
       <section className="personal__similar">
         <BigSectionsHeader text={["Шукають", "Родину"]} />
         <ul className="personal__similar__list">
-          {similar.slice(0,4).map(pet => (
+          {similar.map(pet => (
               <PetCard pet={pet} />
           ))}
         </ul>

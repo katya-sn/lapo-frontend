@@ -20,6 +20,11 @@
     width: 223px;
     height: 19px;
     background-image: url("../../../public/img/logo.svg");
+    transition: transform ease 1s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   &__left {
