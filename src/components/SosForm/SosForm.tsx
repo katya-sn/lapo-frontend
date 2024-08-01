@@ -127,7 +127,9 @@ export const SosForm = () => {
       <div className="overlay" />
       <form
         id="sosForm"
-        className="form"
+        className={classNames("form", {
+          'form--sent': isFormSent,
+        })}
         method="post"
         onSubmit={handleSubmit}
         noValidate
