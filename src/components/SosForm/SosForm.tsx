@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import "./SosForm.scss";
 import { MediumButton } from "../Buttons";
 import classNames from "classnames";
@@ -13,46 +13,6 @@ export const SosForm = () => {
   const [text, setText] = useState(defaultState);
   const [isLoading, setIsLoading] = useState(false);
   const [isFormSent, setIsFormSent] = useState(false);
-
-  const handleBlurForInput = (e: React.FocusEvent<HTMLInputElement>) => {
-    const input =
-      e.target.closest(`input[type="text"]`) ||
-      e.target.closest(".form__input");
-    const formItem = input?.closest(".form__item");
-    const icon = formItem?.querySelector(".form__icon");
-
-    if (input?.getAttribute("data-custom") === "name") {
-      if (e.target.value.trim().length > 2) {
-        input?.classList.add("form__input--success");
-        icon?.classList.add("form__icon--success");
-      } else {
-        input?.classList.remove("form__input--success");
-        icon?.classList.remove("form__icon--success");
-      }
-    } else {
-      if (e.target.value.replace(/[\(\)\-\s]/g, "").length === 10) {
-        input?.classList.add("form__input--success");
-        icon?.classList.add("form__icon--success");
-      } else {
-        input?.classList.remove("form__input--success");
-        icon?.classList.remove("form__icon--success");
-      }
-    }
-  };
-
-  const handleBlurForTextarea = (e: React.FocusEvent<HTMLTextAreaElement>) => {
-    const textarea = e.target.closest(".form__textarea");
-    const formItem = textarea?.closest(".form__big-item");
-
-    const icon = formItem?.querySelector(".form__icon");
-
-    if (e.target.value.trim().length >= 5) {
-      textarea?.classList.add("form__textarea--success");
-      icon?.classList.add("form__icon--success");
-    } else {
-      textarea?.classList.remove("form__textarea--success");
-    }
-  };
 
   const formatPhoneNumber = (phoneNumber: string) => {
     const digits = phoneNumber.replace(/\D/g, "");
@@ -106,27 +66,42 @@ export const SosForm = () => {
     }
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const isNameValid = name.value.trim().length >= 2;
+  const isTextValid = text.value.trim().length > 5;
+  const isPhoneValid = phone.value.replace(/[\(\)\-\s]/g, "").length === 10;
+
+  const validateForm = () => {
+    let isValid = true;
+
+    if (!isNameValid) {
+      setName((prevName) => ({ ...prevName, hasError: true }));
+      isValid = false;
+    } else {
+      setName((prevName) => ({ ...prevName, hasError: false }));
+    }
+
+    if (!isTextValid) {
+      setText((prevText) => ({ ...prevText, hasError: true }));
+      isValid = false;
+    } else {
+      setText((prevText) => ({ ...prevText, hasError: false }));
+    }
+
+    if (!isPhoneValid) {
+      setPhone((prevPhone) => ({ ...prevPhone, hasError: true }));
+      isValid = false;
+    } else {
+      setPhone((prevPhone) => ({ ...prevPhone, hasError: false }));
+    }
+
+    return isValid;
+  };
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsLoading(true);
 
-    if (name.value.trim().length <= 2) {
-      setName((prevName) => ({ ...prevName, hasError: true }));
-    }
-
-    if (text.value.trim().length < 5) {
-      setText((prevText) => ({ ...prevText, hasError: true }));
-    }
-
-    if (phone.value.replace(/[\(\)\-\s]/g, "").length !== 10) {
-      setPhone((prevPhone) => ({ ...prevPhone, hasError: true }));
-    }
-
-    if (
-      name.hasError ||
-      text.hasError ||
-      phone.hasError
-    ) {
+    if (!validateForm()) {
       setIsLoading(false);
       return;
     }
@@ -137,9 +112,14 @@ export const SosForm = () => {
       text: text.value.trim(),
     };
 
-    postForm(newMessage)
-      .then(() => setIsFormSent(true))
-      .catch(() => console.log("form wasn`t post"))
+    try {
+      await postForm(newMessage);
+      setIsFormSent(true);
+      setIsLoading(false);
+    } catch (error) {
+      console.error("Form was not posted:", error);
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -160,7 +140,9 @@ export const SosForm = () => {
           />
         </div>
 
-        {!isFormSent ? (
+        {isLoading && <div className="form__loader"></div>}
+
+        {!isLoading && !isFormSent && (
           <>
             <div className="form__content">
               <div className="form__content__top">
@@ -176,13 +158,13 @@ export const SosForm = () => {
                     value={name.value}
                     className={classNames("form__input", {
                       "form__input--danger": name.hasError,
+                      "form__input--success": isNameValid,
                     })}
                     minLength={2}
                     placeholder="Ім'я"
                     onFocus={() =>
                       setName((prev) => ({ ...prev, hasError: false }))
                     }
-                    onBlur={handleBlurForInput}
                     onChange={(e) =>
                       setName((prev) => ({ ...prev, value: e.target.value }))
                     }
@@ -190,6 +172,7 @@ export const SosForm = () => {
                   <div
                     className={classNames("form__icon", {
                       "form__icon--danger": name.hasError,
+                      "form__icon--success": isNameValid,
                     })}
                   />
                   {!!name.hasError && (
@@ -206,6 +189,7 @@ export const SosForm = () => {
                   <div
                     className={classNames("form__input", {
                       "form__input--danger": phone.hasError,
+                      "form__input--success": isPhoneValid,
                     })}
                   >
                     <input
@@ -223,7 +207,6 @@ export const SosForm = () => {
                       onFocus={() =>
                         setPhone((prev) => ({ ...prev, hasError: false }))
                       }
-                      onBlur={handleBlurForInput}
                       placeholder="(000) 000-00-00"
                       pattern="\([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}"
                       onChange={handlePhoneChange}
@@ -233,6 +216,7 @@ export const SosForm = () => {
                   <div
                     className={classNames("form__icon", {
                       "form__icon--danger": phone.hasError,
+                      "form__icon--success":isPhoneValid,
                     })}
                   />
 
@@ -255,19 +239,20 @@ export const SosForm = () => {
                   onFocus={() =>
                     setText((prev) => ({ ...prev, hasError: false }))
                   }
-                  onBlur={handleBlurForTextarea}
                   minLength={5}
                   maxLength={200}
                   className={classNames("form__textarea", {
                     "form__textarea--danger": text.hasError,
+                    "form__textarea--success": isTextValid,
                   })}
-                  onChange={(e) =>
-                    setText((prev) => ({ ...prev, value: e.target.value }))
-                  }
+                  onChange={(e) => {
+                    setText((prev) => ({ ...prev, value: e.target.value }));
+                  }}
                 />
                 <div
                   className={classNames("form__icon", {
                     "form__icon--danger": text.hasError,
+                    "form__icon--success": isTextValid,
                   })}
                 />
                 {!!text.hasError ? (
@@ -285,7 +270,9 @@ export const SosForm = () => {
               text="Відправити"
             />
           </>
-        ) : (
+        )}
+
+        {isFormSent && (
           <div className="form__success">
             <div className="form__success__content">
               <div className="form__success__done" />

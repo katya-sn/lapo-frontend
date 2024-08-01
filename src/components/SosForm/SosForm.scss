@@ -16,6 +16,18 @@
   flex-direction: column;
   align-items: center;
 
+  &__loader {
+    position: absolute;
+    top: 165px;
+    transform: translate(-50%, -50%);
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid $color-primary-green;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+
   &__header {
     width: 100%;
     display: flex;
@@ -71,6 +83,13 @@
       }
     }
 
+    &:has(input:focus) {
+      border: 1.2px solid $color-black;
+      + .form__icon {
+        display: none;
+      }
+    }
+
     &-prefix {
       @extend %button-text-regular;
       background-color: $color-white;
@@ -84,14 +103,11 @@
 
     &-phone {
       flex: 1;
+      outline: none;
+      border: none;
+      height: 100%;
+      @extend %button-text-regular;
     }
-  }
-
-  &__input-phone {
-    outline: none;
-    border: none;
-    height: 100%;
-    @extend %button-text-regular;
   }
 
   &__textarea {
@@ -112,6 +128,10 @@
     &:focus {
       outline: none;
       border: 1.2px solid $color-black;
+
+      ~ .form__icon {
+        display: none;
+      }
     }
   }
 
@@ -204,10 +224,11 @@
   }
 }
 
-.form__content__big-item--focus .form__text {
-  color: $color-black;
-}
-
-.form__content__item--focus .form__text {
-  color: $color-black;
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
