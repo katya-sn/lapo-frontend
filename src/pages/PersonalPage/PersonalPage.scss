@@ -133,6 +133,12 @@
 
   &__photo {
     object-fit: cover;
+    opacity: 1;
+    transition: opacity 100ms ease-in-out;
+
+    &-disabled {
+      opacity: 0;
+    }
 
     &-main {
       border-radius: 32px;
@@ -140,6 +146,7 @@
       height: 538px;
       border: 4px solid $color-white;
       margin-bottom: 40px;
+      transition: opacity 1s ease-in-out;
     }
 
     &-small {
@@ -148,6 +155,11 @@
       border-radius: 16px;
       width: 106px;
       height: 106px;
+      transition: border 0.5s linear;
+
+      &--active {
+        border: 3px solid $color-warm-yellow;
+      }
     }
   }
 
