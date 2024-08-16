@@ -288,6 +288,10 @@ export const PersonalPage = () => {
               <p className="personal__param__text">{sex}</p>
             </div>
             {size && (
+              <div className="personal__param personal__param--empty">
+            </div>
+            )}
+            {size && (
               <div className="personal__param">
                 <div className="personal__icon personal__icon-size"></div>
                 <p className="personal__param__text">{size}</p>

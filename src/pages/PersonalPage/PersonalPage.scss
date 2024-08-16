@@ -186,6 +186,11 @@
     gap: 16px;
     align-items: center;
 
+    &--empty {
+      opacity: 0;
+      cursor: none;
+    }
+
     &__text {
       width: 252px;
       @extend %h5;
