@@ -37,8 +37,8 @@
 
   &-close {
     background-image: url('../../../public/img/icons/close.svg');
-    background-size: 16px;
     width: 24px;
+    color: none;
 
     &-form {
       background-color: $color-white;

@@ -11,10 +11,10 @@ import {
 } from "../../types/sortFilters";
 
 type Props = {
-  updateSearchParams: (newFilters: Partial<Filters>) => void,
-}
+  updateSearchParams: (newFilters: Partial<Filters>) => void;
+};
 
-export const Filter:React.FC<Props> = ({updateSearchParams}) => {
+export const Filter: React.FC<Props> = ({ updateSearchParams }) => {
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
   const { filters } = useContext(GlobalContext);
 
@@ -79,12 +79,13 @@ export const Filter:React.FC<Props> = ({updateSearchParams}) => {
           {Object.entries(filters).map(([key, value]) => {
             if (Array.isArray(value) && value.length > 0) {
               return value.map((item) => (
-                <div className="filter__item" key={`${key}-${item}`} >
+                <div className="filter__item" key={`${key}-${item}`}>
                   <p className="filter__item__text">{findParam(`${item}`)}</p>
-                  <button
-                    className="icon icon-close"
-                    onClick={() => updateSearchParams({ [key]: value.filter(param => param !== item) })}
-                  ></button>
+                    <button className="icon icon-close" onClick={() =>
+                        updateSearchParams({
+                          [key]: value.filter((param) => param !== item),
+                        })
+                      }></button>
                 </div>
               ));
             } else if (typeof value === "boolean" && value === true) {
