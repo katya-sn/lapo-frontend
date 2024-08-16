@@ -37,12 +37,13 @@
 
   &-close {
     background-image: url('../../../public/img/icons/close.svg');
-    width: 24px;
-    color: none;
+    width: 18px;
+    background-size: cover;
 
     &-form {
       background-color: $color-white;
       height: 24px;
+      width: 24px;
     }
 
     &-filter {

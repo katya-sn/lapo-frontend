@@ -103,11 +103,17 @@ export const CategoryPage = () => {
           <BreadCrumb />
           <BigSectionsHeader text={["Супер", "Друзі"]} />
           <Filter updateSearchParams={updateSearchParams} />
-          <PetsList pets={petsList} />
-          <Pagination
+            {petsList.length > 0 ? (
+              <>
+              <PetsList pets={petsList} />
+              <Pagination
             numOfPages={numOfPages}
             updateSearchParams={updateSearchParams}
-          />
+                />
+                </>
+            ) : (
+                <h2 className="page__sorry">Тваринку за обраними фільтрами не знайдено</h2>
+          )}
         </div>
       )}
     </>

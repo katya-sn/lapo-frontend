@@ -1,1 +1,9 @@
 @import './../../styles/main.scss';
+
+.page {
+  &__sorry {
+    @extend %h4;
+    text-align: center;
+    margin-bottom: 64px;
+  }
+}
