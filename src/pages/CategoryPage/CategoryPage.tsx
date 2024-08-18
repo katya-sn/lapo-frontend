@@ -11,6 +11,7 @@ import { Pagination } from "../../components/Pagination";
 import { useAppDispatch, useAppSelector } from "../../app/hook";
 import * as animalActions from "../../features/animalSlice";
 import { Loader } from "../../components/Loader";
+import { BASE_URL } from "../../utils/fetchProducts";
 
 export const CategoryPage = () => {
   const { setFilters, setIsLoading, isLoading } = useContext(GlobalContext);
@@ -111,8 +112,11 @@ export const CategoryPage = () => {
             updateSearchParams={updateSearchParams}
                 />
                 </>
-            ) : (
-                <h2 className="page__sorry">Тваринку за обраними фільтрами не знайдено</h2>
+            ) : (<div className="page__empty">
+                <img src={`${BASE_URL}/img/sorry.gif`} alt="sorry, there are no results" className="page__gif" />
+                 <h4 className="page__sorry">Вибачте, за вашим запитом 
+                 результатів не знайдено</h4>
+            </div>
           )}
         </div>
       )}
