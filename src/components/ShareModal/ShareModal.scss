@@ -44,8 +44,23 @@
       &__params {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: normal;
         gap: 8.5px;
+        flex-wrap: wrap;
+      }
+
+      &__param {
+        width: auto;
+        height: auto;
+        display: flex;
+        gap: 8.5px;
+        align-items: center;
+
+        &:last-child {
+          .share__info__dot {
+            display: none;
+          }
+        }
       }
 
       &__text {
@@ -57,10 +72,6 @@
         height: 5px;
         border-radius: 50%;
         background-color: $color-black;
-
-        &:last-child {
-          display: none;
-        }
       }
     }
 

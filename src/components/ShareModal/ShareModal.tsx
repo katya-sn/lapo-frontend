@@ -74,10 +74,10 @@ export const ShareModal: React.FC<Props> = ({ closeModal, pet, photo }) => {
           />
           <div className="share__info__params">
             {params.map((param) => (
-              <>
+              <div className="share__info__param">
                 <h5 className="share__info__text">{param}</h5>
                 <div className="share__info__dot" />
-              </>
+              </div>
             ))}
           </div>
         </div>
