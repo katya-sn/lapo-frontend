@@ -11,13 +11,10 @@ type Props = {
 
 export const ShareModal: React.FC<Props> = ({ closeModal, pet, photo }) => {
   const { name, sex, size, age } = pet;
-  const params = size ? [name, sex, `${age} роки`, size.split(' ')[0]] : [name, sex, age];
+  const params = size ? [name, sex, age, size.split(' ')[0]] : [name, sex, age];
 
   const pageUrl = encodeURIComponent(window.location.href);
   const pageTitle = encodeURIComponent(document.title);
-  //const ngrokUrl = 'https://aafc-79-110-133-41.ngrok-free.app'; // замініть на ваш HTTPS URL від ngrok
-  //const pagePath = window.location.pathname + window.location.hash;
-  //const pageUrl = encodeURIComponent(`${ngrokUrl}${pagePath}`);
 
   const handleCopyLink = async (): Promise<void> => {
     try {
@@ -39,13 +36,11 @@ export const ShareModal: React.FC<Props> = ({ closeModal, pet, photo }) => {
 
   const handleTelegramShare = () => {
     const telegramUrl = `https://t.me/share/url?url=${pageUrl}`;
-    console.log(telegramUrl);
     openWindow(telegramUrl);
   };
 
   const handleFacebookShare = () => {
     const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}&quote=${pageTitle}`;
-    console.log(facebookUrl);
     openWindow(facebookUrl);
   };
 
