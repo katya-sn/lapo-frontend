@@ -15,6 +15,14 @@ export const Favourites: React.FC<Props> = ({ closeBar }) => {
   const dispatch = useAppDispatch();
   const { likedPets } =
     useAppSelector((state) => state.likedPets);
+  
+  const getSrc = (photo: string | string[]) => {
+    if (Array.isArray(photo)) {
+      return `${BASE_URL}${photo[0]}`;
+    }
+
+    return `${BASE_URL}${photo}`
+  }
 
   return (
     <aside>
@@ -44,7 +52,7 @@ export const Favourites: React.FC<Props> = ({ closeBar }) => {
                 <li className="favs__item" key={pet.name}>
                   <Link to={getAbsolutePath(pet.category, pet.category, pet.id)} onClick={closeBar}>
                   <img
-                    src={`${BASE_URL}${pet.photo}`}
+                    src={getSrc(pet.photo)}
                     alt="petPhoto"
                     className="favs__item__img"
                   />

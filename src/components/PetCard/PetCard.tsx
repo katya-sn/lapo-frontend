@@ -19,6 +19,8 @@ export const PetCard: React.FC<Props> = ({ pet }) => {
   const { likedPets } = useAppSelector(state => state.likedPets);
   const isLiked = isAnimalLiked(likedPets, pet.category, pet.id);
 
+  console.log(pet);
+
   const handleLikeClick = () => {
     if (!isLiked) {
       dispatch(likedActions.addPet(pet))

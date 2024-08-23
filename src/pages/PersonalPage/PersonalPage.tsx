@@ -36,6 +36,7 @@ export const PersonalPage = () => {
   const [vaccinated, setVaccinated] = useState("");
   const [sterilized, setSterilized] = useState("");
   const timerForChange = useRef<number | null>(null);
+  console.log(pet);
 
   const changePhoto = (newIndex: number) => {
     if (timerForChange.current) {
