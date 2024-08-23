@@ -1,9 +1,11 @@
 import React from "react";
 import { MediumButton } from "../Buttons";
 import "./Favourites.scss";
-import { BASE_URL, MEDIA_URL } from "../../utils/fetchProducts";
+import { BASE_URL } from "../../utils/fetchProducts";
 import { useAppDispatch, useAppSelector } from "../../app/hook";
 import * as likedActions from '../../features/likedSlice';
+import { Link } from "react-router-dom";
+import { getAbsolutePath } from "../../utils/getAbsolutePath";
 
 type Props = {
   closeBar: () => void;
@@ -13,7 +15,6 @@ export const Favourites: React.FC<Props> = ({ closeBar }) => {
   const dispatch = useAppDispatch();
   const { likedPets } =
     useAppSelector((state) => state.likedPets);
-
 
   return (
     <aside>
@@ -41,11 +42,13 @@ export const Favourites: React.FC<Props> = ({ closeBar }) => {
             <ul className="favs__items">
               {likedPets.map((pet) => (
                 <li className="favs__item" key={pet.name}>
+                  <Link to={getAbsolutePath(pet.category, pet.category, pet.id)} onClick={closeBar}>
                   <img
                     src={`${BASE_URL}${pet.photo}`}
                     alt="petPhoto"
                     className="favs__item__img"
                   />
+                  </Link>
                   <div className="favs__item__info">
                     <p className="favs__item__name">{pet.name}</p>
                     <div className="favs__item__props">
@@ -54,6 +57,8 @@ export const Favourites: React.FC<Props> = ({ closeBar }) => {
                   </div>
                   <div className="favs__item__footer">
                     <MediumButton
+                      to="adopt"
+                      onClick={closeBar}
                       leftIcon={false}
                       rightIcon={true}
                       text="Усиновити"
