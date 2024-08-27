@@ -67,7 +67,7 @@ export const HowToHelp = () => {
       <div className="help__content">
         <div className="help__left">
           <img className="help__meme-cat" src={`${BASE_URL}/img/memeCat.png`} />
-          <img className="help__meme-text" src={`${BASE_URL}/img/memeText.png`} />
+          <img className="help__meme-text" src={`${BASE_URL}/img/memeText.svg`} />
         </div>
 
         <div className="help__right">
