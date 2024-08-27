@@ -8,6 +8,7 @@ import * as likedActions from "../../features/likedSlice";
 import { isAnimalLiked } from "../../api/likedApi";
 import classNames from "classnames";
 import { getAbsolutePath } from "../../utils/getAbsolutePath";
+import { Img } from 'react-image';
 
 type Props = {
   pet: Pet;

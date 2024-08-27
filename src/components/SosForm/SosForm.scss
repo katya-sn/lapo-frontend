@@ -120,6 +120,7 @@
     border-radius: 8px;
     @extend %button-text-regular;
     padding: 8px 16px;
+    resize: none;
 
     &--danger {
       border: 1.2px solid $color-error;
