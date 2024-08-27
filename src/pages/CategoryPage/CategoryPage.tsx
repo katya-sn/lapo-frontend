@@ -30,7 +30,6 @@ export const CategoryPage = () => {
       dispatch(animalActions.fetchDogs(location.search.toString()));
     } else {
       dispatch(animalActions.fetchAnimals(location.search.toString()));
-      console.log(location.search.toString());
     }
   };
 
@@ -97,7 +96,7 @@ export const CategoryPage = () => {
 
   return (
     <>
-      {isLoading ? (
+      {(isLoading || loading) ? (
         <Loader />
       ) : (
         <div className="page">

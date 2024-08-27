@@ -30,7 +30,7 @@ export const Contacts = () => {
           className="contacts__dog"
         />
         <img
-          src={`${BASE_URL}/img/contactsWaiting.png`}
+          src={`${BASE_URL}/img/contactsWaiting.svg`}
           alt="dog"
           className="contacts__waiting"
         />
@@ -87,7 +87,7 @@ export const Contacts = () => {
             className="contacts__call__cat"
           />
           <img
-            src={`${BASE_URL}/img/contactsCatText.png`}
+            src={`${BASE_URL}/img/contactsCatText.svg`}
             alt="cat"
             className="contacts__call__text"
           />
