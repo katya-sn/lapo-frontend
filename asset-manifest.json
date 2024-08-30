@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/vusoLapoHvist/static/css/main.d56be812.css",
+    "main.css": "/vusoLapoHvist/static/css/main.535af96d.css",
     "main.js": "/vusoLapoHvist/static/js/main.a142cd1b.js",
     "static/media/bigPaws.svg": "/vusoLapoHvist/static/media/bigPaws.16ef41fcbc18a5ffff8e.svg",
     "static/media/Mariupol-Regular.ttf": "/vusoLapoHvist/static/media/Mariupol-Regular.1b8a8b1314f29e35c823.ttf",
@@ -41,11 +41,11 @@
     "static/media/success.svg": "/vusoLapoHvist/static/media/success.2f0c1dd916b2964ad051.svg",
     "static/media/arrowRight.svg": "/vusoLapoHvist/static/media/arrowRight.e8e2322fe21e9c77830d.svg",
     "static/media/arrowUp.svg": "/vusoLapoHvist/static/media/arrowUp.600435bebac171aeeb31.svg",
-    "main.d56be812.css.map": "/vusoLapoHvist/static/css/main.d56be812.css.map",
+    "main.535af96d.css.map": "/vusoLapoHvist/static/css/main.535af96d.css.map",
     "main.a142cd1b.js.map": "/vusoLapoHvist/static/js/main.a142cd1b.js.map"
   },
   "entrypoints": [
-    "static/css/main.d56be812.css",
+    "static/css/main.535af96d.css",
     "static/js/main.a142cd1b.js"
   ]
 }
