@@ -25,7 +25,7 @@ export const Categories = () => {
           <Link to={`/pets/${category.class}`} className="categories__category" key={category.title} >
             <div className="categories__category__title">{category.title}</div>
             <div className="categories__category__photo">
-              <img src={`${BASE_URL}/${category.img}`} alt="categoryImg" className={`categories__category__${category.class}`} />
+              <img loading="lazy" src={`${BASE_URL}/${category.img}`} alt="categoryImg" className={`categories__category__${category.class}`} />
             </div>
           </Link>
         ))}

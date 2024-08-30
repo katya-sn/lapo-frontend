@@ -36,7 +36,6 @@ export const PersonalPage = () => {
   const [vaccinated, setVaccinated] = useState("");
   const [sterilized, setSterilized] = useState("");
   const timerForChange = useRef<number | null>(null);
-  console.log(pet);
 
   const changePhoto = (newIndex: number) => {
     if (timerForChange.current) {
@@ -178,6 +177,7 @@ export const PersonalPage = () => {
       <div className="personal__content">
         <div className="personal__left">
           <img
+            loading="lazy"
             src={`${BASE_URL}${photo[mainPhoto]}`}
             alt="main-photo"
             className={classNames("personal__photo personal__photo-main", {
@@ -208,6 +208,7 @@ export const PersonalPage = () => {
                   photo.map((image, index) => (
                     <li key={image}>
                       <img
+                        loading="lazy"
                         src={`${BASE_URL}${image}`}
                         alt={`${index} + 1`}
                         onClick={() => changePhoto(index)}

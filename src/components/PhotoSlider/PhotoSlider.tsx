@@ -10,9 +10,8 @@ export const PhotoSlider = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  const gap = 40; // Gap between images in pixels
-  const itemWidth = 100 / visibleImages; // Width of each item in percentage
-  const transitionTime = 300;
+  const gap = 40;
+  const itemWidth = 100 / visibleImages;
   const totalImages = aboutUsPhoto.length;
 
   const nextSlide = () => {

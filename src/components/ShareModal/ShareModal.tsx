@@ -1,7 +1,7 @@
 import React from "react";
 import "./ShareModal.scss";
 import { Pet } from "../../types/Pet";
-import { BASE_URL, MEDIA_URL } from "../../utils/fetchProducts";
+import { BASE_URL } from "../../utils/fetchProducts";
 
 type Props = {
   closeModal: () => void;
@@ -68,6 +68,7 @@ export const ShareModal: React.FC<Props> = ({ closeModal, pet, photo }) => {
 
         <div className="share__info">
           <img
+            loading="lazy"
             className="share__info__photo"
             src={`${BASE_URL}${photo[0]}`}
             alt="pet-photo"

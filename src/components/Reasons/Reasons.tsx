@@ -34,6 +34,7 @@ export const Reasons = () => {
             })}
           >
             <img
+              loading="lazy"
               className="reasons__img"
               style={{ backgroundImage: `url('${BASE_URL}/${reason.image}')` }}
             />

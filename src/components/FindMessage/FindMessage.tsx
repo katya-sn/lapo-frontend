@@ -4,7 +4,7 @@ import { GlobalContext } from "../../context/GlobalContext";
 
 export const FindMessage = () => {
   const [isMessageOpen, setIsMessageOpen] = useState(() => sessionStorage.getItem('isMessageOpen') !== 'false');
-  const { isSosFormOpen, setIsSosFormOpen } = useContext(GlobalContext);
+  const { setIsSosFormOpen } = useContext(GlobalContext);
   
   useEffect(() => {
     sessionStorage.setItem('isMessageOpen', String(isMessageOpen));

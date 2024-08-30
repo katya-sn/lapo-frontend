@@ -25,11 +25,13 @@ export const Contacts = () => {
           </div>
         </div>
         <img
+          loading="lazy"
           src={`${BASE_URL}/img/contactsDog.png`}
           alt="dog"
           className="contacts__dog"
         />
         <img
+          loading="lazy"
           src={`${BASE_URL}/img/contactsWaiting.svg`}
           alt="dog"
           className="contacts__waiting"
@@ -82,11 +84,13 @@ export const Contacts = () => {
 
         <div className="contacts__call">
           <img
+            loading="lazy"
             src={`${BASE_URL}/img/contactsCat.png`}
             alt="cat"
             className="contacts__call__cat"
           />
           <img
+            loading="lazy"
             src={`${BASE_URL}/img/contactsCatText.svg`}
             alt="cat"
             className="contacts__call__text"

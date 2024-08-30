@@ -51,7 +51,8 @@ export const Favourites: React.FC<Props> = ({ closeBar }) => {
               {likedPets.map((pet) => (
                 <li className="favs__item" key={pet.name}>
                   <Link to={getAbsolutePath(pet.category, pet.category, pet.id)} onClick={closeBar}>
-                  <img
+                    <img
+                      loading="lazy"
                     src={getSrc(pet.photo)}
                     alt="petPhoto"
                     className="favs__item__img"

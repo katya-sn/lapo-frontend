@@ -8,7 +8,6 @@ import * as likedActions from "../../features/likedSlice";
 import { isAnimalLiked } from "../../api/likedApi";
 import classNames from "classnames";
 import { getAbsolutePath } from "../../utils/getAbsolutePath";
-import { Img } from 'react-image';
 
 type Props = {
   pet: Pet;
@@ -19,8 +18,6 @@ export const PetCard: React.FC<Props> = ({ pet }) => {
   const dispatch = useAppDispatch();
   const { likedPets } = useAppSelector(state => state.likedPets);
   const isLiked = isAnimalLiked(likedPets, pet.category, pet.id);
-
-  console.log(pet);
 
   const handleLikeClick = () => {
     if (!isLiked) {
@@ -41,6 +38,7 @@ export const PetCard: React.FC<Props> = ({ pet }) => {
     <div className="card" key={pet.name}>
       <Link to={getAbsolutePath(location.pathname, pet.category, pet.id)}>
         <img
+          loading="lazy"
           src={`${BASE_URL}${pet.photo}`}
           alt="petPhoto"
           className="card__img"

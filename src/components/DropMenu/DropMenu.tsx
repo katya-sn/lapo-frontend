@@ -64,6 +64,7 @@ export const DropMenu = () => {
           >
             <p className="dropmenu__text">{item.name}</p>
             <img
+              loading="lazy"
               src={`${BASE_URL}/${item.img}`}
               className="dropmenu__img"
               alt={item.name}
