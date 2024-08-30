@@ -6,16 +6,6 @@ export const Start = () => {
   return (
     <div className="start">
       <div className="start__left">
-        {/*
-        <div className="start__circle">
-          <img
-            src="../../../img/kitPes.png"
-            alt="kitPes"
-            className="start__animals"
-          />
-        </div> */}
-
-        
         <img
           src={`${BASE_URL}/img/catDogHero.png`}
             alt="kitPes"
