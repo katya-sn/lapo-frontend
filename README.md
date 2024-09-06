@@ -1,46 +1,25 @@
-# Getting Started with Create React App
+# VusoLapoHvist
+- [DEMO LINK](https://katya-sn.github.io/vusoLapoHvist/#/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a comprehensive Animal Shelter website built with React and TypeScript. The site provides information about the shelter and offers various interactive features for users to support and engage with the shelter’s activities.
 
-## Available Scripts
+## Features
+**Shelter Information**: Users can learn about the shelter's mission and team.
+**Donations**: The website allows users to make one-time donations or set up recurring subscriptions to support the shelter.
+**Report an Animal in Need**: A feedback form enables users to report animals in distress directly to the shelter.
+**Animal Categories**: Animals are categorized (e.g., cats, dogs) with filtering options for various parameters to help users find their perfect companion.
+**Social Sharing**: Users can share individual animal profiles on social media platforms.
+**Favorites**: Animals can be saved to a favorites list ("liked") for easy access later.
+**Interactive Game**: A "He or She" game adds a fun element, allowing users to guess the gender of the animals.
 
-In the project directory, you can run:
+## Main Technologies Used
+**React & TypeScript**: The project is developed using modern React features(different hooks) with TypeScript for type safety.
+**Redux**: Redux is used for state management, ensuring a scalable and maintainable codebase.
+**SASS**: Styling.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## How to Run the Page Locally
+1. Clone the repository to your local machine using the command **`git clone https://github.com/katya-sn/vusoLapoHvist.git`**.
+2. Then, navigate to the project directory using **cd vusoLapoHvist**.
+3. Make sure you have Node.js and npm installed, and install the project dependencies by running **`npm install`**.
+4. After the dependencies are installed, start the development server with **`npm start`**.
+5. Finally, open your browser and go to **http://localhost:3000** to see the Landing running locally.
