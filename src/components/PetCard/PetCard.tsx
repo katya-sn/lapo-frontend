@@ -38,7 +38,6 @@ export const PetCard: React.FC<Props> = ({ pet }) => {
     <div className="card" key={pet.name}>
       <Link to={getAbsolutePath(location.pathname, pet.category, pet.id)}>
         <img
-          loading="lazy"
           src={`${BASE_URL}${pet.photo}`}
           alt="petPhoto"
           className="card__img"
