@@ -93,7 +93,6 @@ export const CategoryPage = () => {
     Promise.all([delayPromise]).finally(() => setIsLoading(false));
    }, [location.pathname, location.search, dispatch]); 
   
-
   return (
     <>
       {(isLoading || loading) ? (
